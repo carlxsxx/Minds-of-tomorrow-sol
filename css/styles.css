@@ -1,11 +1,15 @@
 * {
     box-sizing: border-box;
-    font family / font-family: 'Quicksand', sans-serif;
+    /* font family */
+    font-family: 'Quicksand', sans-serif;
 }
 
 body {
     margin: 0;
 }
+
+
+/* Clear floats after the columns */
 
 .row:after {
     content: "";
@@ -14,19 +18,19 @@ body {
 }
 
 .header {
-    background-image: url(../img/banner-2.jpg);
+    background-image: url("../img/banner-2.jpg");
     background-size: cover;
     background-attachment: fixed;
-    padding: 10% 20%;
+    padding: 20px;
     text-align: center;
 }
 
 .header h1 {
-    font-size: 100px;
+    font-size: 8vw;
 }
 
 
-/*Clases de columnas */
+/* Clases de Columns*/
 
 .one-column {
     float: left;
@@ -36,7 +40,11 @@ body {
 
 .one-column h1 {
     font-size: 5vw;
-    text-align: ;
+}
+
+#section-2 {
+    background-color: #28ECA5;
+    text-align: center;
 }
 
 .two-column {
@@ -57,16 +65,33 @@ body {
     width: 100%;
 }
 
+.three-coolumn {
+    float: left;
+    width: 33.3%;
+    padding: 10%;
+}
+
 .four-column {
     float: left;
     width: 25%;
     padding: 2%;
 }
 
+.four-column p {
+    text-align: center;
+}
+
 .four-column img {
     width: 100%;
 }
 
-#section2 {
-    background-color: #28eca5;
+
+/*clase de padding*/
+
+.padding-0 {
+    padding: 0%;
+}
+
+#seccion-5 {
+    background-color: ;
 }
