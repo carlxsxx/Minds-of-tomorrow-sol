@@ -93,5 +93,37 @@ body {
 }
 
 #seccion-5 {
-    background-color: ;
+    text-align: center;
+    font-size: 3vw;
+    background-color: #46A6FC;
+}
+
+#seccion-5 p {
+    color: white;
+}
+
+#footer {
+    background-color: black;
+    color: white;
+}
+
+#footer p {
+    font-size: 20px;
+    text-align: left;
+}
+
+
+/* Responsive layout - makes the three columns stack on top of each other instead of next to each other */
+
+@media screen and (max-width:700px) {
+    .two-column,
+    .three-column {
+        width: 100%;
+    }
+    .header {
+        background-image: url('');
+    }
+    .four-column {
+        width: 50%;
+    }
 }
