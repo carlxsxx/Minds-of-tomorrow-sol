@@ -8,10 +8,6 @@ body {
     margin: 0;
 }
 
-html {
-    scroll-behavior: smooth;
-}
-
 
 /* Clear floats after the columns */
 
@@ -21,29 +17,24 @@ html {
     clear: both;
 }
 
-.header {
-    background-image: url("../img/banner-2.jpg");
-    background-size: cover;
-    background-attachment: fixed;
-    padding: 20px;
-    text-align: center;
-}
 
-.header h1 {
-    font-size: 8vw;
+/* Estilos de la barra de navegación */
+
+html {
+    scroll-behavior: smooth;
 }
 
 ul {
+    font-size: 20px;
     list-style-type: none;
     margin: 0;
-    font-size: 2vw;
-    padding: 0 15%;
+    padding: 5px 20%;
     overflow: hidden;
     background-color: white;
     position: fixed;
     top: 0;
     width: 100%;
-    transition: 0.6s;
+    transition: 0.8s;
 }
 
 li {
@@ -57,29 +48,40 @@ li a {
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
-    color: black;
 }
 
-li a:hover {
-    background-color: black;
+li a:hover:not {
+    /* Tengo puesto :not para que no se ejecute, si quiero que funcione quitar el :not (pero queda feo) */
     color: white;
+    background-color: black;
 }
 
 
-/* Clases de Columns*/
+/* Style the header */
+
+.header {
+    background-image: url('../img/banner-2.jpg');
+    background-size: cover;
+    background-attachment: fixed;
+    padding: 10% 20px;
+    text-align: center;
+}
+
+.header h1 {
+    font-size: 100px;
+}
+
+
+/* CLASES DE COLUMNAS*/
 
 .one-column {
     float: left;
     width: 100%;
-    padding: 10%;
+    padding: 3% 13%;
 }
 
 .one-column h1 {
     font-size: 5vw;
-}
-
-#section-2 {
-    background-color: #28ECA5;
     text-align: center;
 }
 
@@ -87,6 +89,10 @@ li a:hover {
     float: left;
     width: 50%;
     padding: 2%;
+}
+
+.two-column img {
+    width: 100%;
 }
 
 .two-column h1 {
@@ -97,45 +103,31 @@ li a:hover {
     font-size: 3vw;
 }
 
-.two-column img {
-    width: 100%;
-}
-
-.three-coolumn {
-    float: left;
-    width: 33.3%;
-    padding: 10%;
-}
-
 .four-column {
     float: left;
     width: 25%;
     padding: 2%;
 }
 
-.four-column p {
-    text-align: center;
-}
-
 .four-column img {
     width: 100%;
 }
 
-
-/*clase de padding*/
-
-.padding-0 {
-    padding: 0%;
-}
-
-#seccion-5 {
+.four-column p {
     text-align: center;
-    font-size: 3vw;
-    background-color: #46A6FC;
 }
 
-#seccion-5 p {
-    color: white;
+.four-column2 img {
+    width: 25%;
+    float: left;
+}
+
+#section-2 {
+    background-color: #28ECA5;
+}
+
+#section-5 {
+    background-color: #46A6FC;
 }
 
 #footer {
@@ -149,23 +141,51 @@ li a:hover {
 }
 
 
-/* Responsive layout - makes the three columns stack on top of each other instead of next to each other */
+/* CLASES DE COLUMNAS*/
+
+.padding-0 {
+    padding: 0px;
+}
+
+.padding-30 {
+    padding-top: 30px;
+}
+
+.padding-top-bottom {
+    padding: 12% 0;
+}
 
 @media screen and (max-width:700px) {
-    .two-column,
-    .three-column {
+    .two-column h1 {
+        font-size: 8vw;
+    }
+    .two-column p {
+        font-size: 4.2vw;
+    }
+    .two-column {
         width: 100%;
     }
-    .header {
-        background-image: url('');
+    .one-column h1 {
+        font-size: 8vw;
     }
     .four-column {
         width: 50%;
     }
+    li {
+        width: 50%;
+        float: none;
+        display: inline-block;
+    }
     li a {
-        font-size: 14px;
+        font-size: 20px;
+        display: inline-block;
     }
     ul {
         padding: 0px;
+        overflow: auto;
+        white-space: nowrap;
+    }
+    .header h1 {
+        font-size: 300%;
     }
 }
